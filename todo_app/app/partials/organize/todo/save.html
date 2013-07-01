@@ -1,0 +1,33 @@
+<h1>Save ToDo</h1>
+
+<p class="text-right">
+    <a class="btn" href="#/organize/todo/index"><i class="ico-add"></i>Back to ToDo List</a>
+</p>
+
+<p>{{ flash }}</p>
+
+<form class="form-horizontal" ng-submit="save()">
+    <div class="control-group">
+        <label class="control-label" for="inputToDoName">ToDo</label>
+        <div class="controls">
+            <input type="text" id="inputToDoName" ng-model="inputToDoName" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputToDoCategory">Category</label>
+        <div class="controls">
+            <select ng-model="inputToDoCategory" ng-options="c.name as c.name for (id, c) in categories"></select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputToDoStatus">Done</label>
+        <div class="controls">
+            <input type="checkbox" id="inputToDoStatus" ng-model="inputToDoStatus">
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn">Save</button>
+        </div>
+    </div>
+</form>

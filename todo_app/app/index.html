@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>TODO APP</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+</head>
+<body>
+  <header class="container-fluid">
+        <div class="row-fluid">
+            <nav class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="#/dashboard">TODO App</a>
+                    <ul class="nav">
+                        <li><a href="#/organize/category/index">Category</a></li>
+                        <li><a href="#/organize/todo/index">ToDo</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+  </header>
+
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+        <article ng-view></article>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+  <footer>Let's learn AngularJS</footer>
+    </div>
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+
+  <script src="js/organize/category/controllers.js"></script>
+  <script src="js/organize/category/services.js"></script>
+
+  <script src="js/organize/todo/controllers.js"></script>
+  <script src="js/organize/todo/services.js"></script>
+
+</body>
+</html>

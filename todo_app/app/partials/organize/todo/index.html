@@ -1,0 +1,31 @@
+<h1>ToDo List</h1>
+
+<p class="text-right">
+    <a class="btn" href="#/organize/todo/save"><i class="icon-plus"></i> Add New ToDo</a>
+</p>
+
+<p>{{ flash }}</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#ID</th>
+            <th>ToDo</th>
+            <th>Category</th>
+            <th>Done</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="(id, todo) in todos">
+            <td>{{ id }}</td>
+            <td>{{ todo.name }}</td>
+            <td>{{ todo.category }}</td>
+            <td>{{ todo.status }}</td>
+            <td>
+                <a href="#/organize/todo/save/{{ id }}">Edit</a>
+                <a href="" ng-click="del(id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

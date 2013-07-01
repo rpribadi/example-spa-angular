@@ -1,0 +1,13 @@
+<h1>Dashboard</h1>
+
+<ul>
+    <li ng-repeat="(category, todos) in grouped_todo">
+        <h2>{{ category }}</h2>
+        <ul>
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.status" />
+                <span class="todo-done-{{ todo.status }}">{{ todo.name }}</span>
+            </li>
+        </ul>
+    </li>
+</ul>

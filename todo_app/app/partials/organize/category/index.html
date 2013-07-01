@@ -1,0 +1,27 @@
+<h1>Category List</h1>
+
+<p class="text-right">
+    <a class="btn" href="#/organize/category/save"><i class="icon-plus"></i> Add New Category</a>
+</p>
+
+<p>{{ flash }}</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#ID</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="(id, category) in categories">
+            <td>{{ id }}</td>
+            <td>{{ category.name }}</td>
+            <td>
+                <a href="#/organize/category/save/{{ id }}">Edit</a>
+                <a href="" ng-click="del(id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
